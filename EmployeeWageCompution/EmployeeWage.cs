@@ -8,10 +8,10 @@ namespace EmployeeWageCompution
     {
         public const int FULL_TIME = 1;
         public const int PART_TIME = 2;
-        private string companyName;
-        private int wagePerHr;
-        private int maxWorkingDays;
-        private int maxWorkingHrs;
+        public string companyName;
+        public int wagePerHr;
+        public int maxWorkingDays;
+        public int maxWorkingHrs;
         public EmployeeWage(string companyName,int wagePerHr,int maxWorkingDays,int maxWorkingHrs)
         {
             this.companyName = companyName;
