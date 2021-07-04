@@ -6,11 +6,13 @@ namespace EmployeeWageCompution
 {
     class EmployeeWage
     {
+        //Initialising variables
         public string companyName;
         public int wagePerHr;
         public int maxWorkingDays;
         public int maxWorkingHrs;
         public int totalEmpWage;
+
         public EmployeeWage(string companyName,int wagePerHr,int maxWorkingDays,int maxWorkingHrs)
         {
             this.companyName = companyName;

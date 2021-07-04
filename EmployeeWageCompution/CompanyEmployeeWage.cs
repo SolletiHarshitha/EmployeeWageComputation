@@ -11,22 +11,30 @@ namespace EmployeeWageCompution
         public const int PART_TIME = 2;
         public int numberOfCompanies = 0;
         public EmployeeWage[] companyWageArray;
+
+        //Object array is created
         public CompanyEmployeeWage()
         {
             companyWageArray = new EmployeeWage[10];
         }
+
+        //Adding the company 
         public void addCompany(string companyName,int wagePerHr,int maxWorkingDays,int maxWorkingHrs)
         {
             companyWageArray[numberOfCompanies] = new EmployeeWage(companyName, wagePerHr, maxWorkingDays, maxWorkingHrs);
             numberOfCompanies++;
         }
+
         public void Compute()
         {
+            //Employee wage computation is done for each company
             for(int i=0;i<numberOfCompanies;i++)
             {
                 Compute(this.companyWageArray[i]);
             }
         }
+
+        //Employee wage computation is done for the specified company
         public void Compute(EmployeeWage empwage)
         {
             Random random = new Random();
@@ -57,6 +65,7 @@ namespace EmployeeWageCompution
                 if (empInput != 0)
                     day++;
             }
+            //Calculating the total employee wage
             empwage.totalEmpWage = totalWage;
             Console.WriteLine("Wage for " + empwage.companyName + " employees for " + day + " working days per month : " +empwage.totalEmpWage);
         }
