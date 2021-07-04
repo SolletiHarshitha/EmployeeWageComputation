@@ -8,9 +8,6 @@ namespace EmployeeWageCompution
     {
         public const int FULL_TIME = 1;
         public const int PART_TIME = 2;
-       // public const int WAGE_PER_HR = 20;
-        //public const int MAX_WORKING_DAYS = 20;
-        //public const int MAX_WORKING_HRS = 100;
         public static void Compute(string CompanyName,int WagePerHr,int MaxWorkingDays,int MaxWorkingHrs)
         {
             Random random = new Random();
