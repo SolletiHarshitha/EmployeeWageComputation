@@ -4,6 +4,7 @@ using System.Text;
 
 namespace EmployeeWageCompution
 {
+   
     class CompanyEmployeeWage
     {
         public const int FULL_TIME = 1;
@@ -19,7 +20,7 @@ namespace EmployeeWageCompution
             companyWageArray[numberOfCompanies] = new EmployeeWage(companyName, wagePerHr, maxWorkingDays, maxWorkingHrs);
             numberOfCompanies++;
         }
-        public void ComputeEmpWage()
+        public void Compute()
         {
             for(int i=0;i<numberOfCompanies;i++)
             {

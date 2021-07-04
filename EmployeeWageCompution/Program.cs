@@ -11,7 +11,7 @@ namespace EmployeeWageCompution
             CompanyEmployeeWage companyempwage = new CompanyEmployeeWage();
             companyempwage.addCompany("Dmart",20,20,100);
             companyempwage.addCompany("Reliance",50,20,75);
-            companyempwage.ComputeEmpWage();
+            companyempwage.Compute();
         }
     }
 }
