@@ -16,11 +16,13 @@ namespace EmployeeWageCompution
         public const int PART_TIME = 2;
         public int numberOfCompanies = 0;
         public LinkedList<EmployeeWage> companyWageArray;
+        public Dictionary<string, EmployeeWage> companyEmpWage;
 
         //Object ArrayList is created
         public CompanyEmployeeWage()
         {
             companyWageArray = new LinkedList<EmployeeWage>();
+            companyEmpWage = new Dictionary<string, EmployeeWage>();
         }
 
         //Adding the company 
@@ -28,6 +30,7 @@ namespace EmployeeWageCompution
         {
             EmployeeWage empwage = new EmployeeWage(companyName, wagePerHr, maxWorkingDays, maxWorkingHrs);
             companyWageArray.AddLast(empwage);
+            companyEmpWage.Add(companyName, empwage);
         }
 
         public void Compute()
@@ -71,15 +74,18 @@ namespace EmployeeWageCompution
 
                 if (empInput != 0)
                 {
-                    Console.WriteLine("Employee wage for DAY - "+day+" is : "+dailyWage);
+                    Console.WriteLine("Employee wage for "+empwage.companyName+" for DAY - "+day+" is : "+dailyWage);
                     day++;
                 }
             }
             //Calculating the total employee wage
-            Console.WriteLine();
             empwage.totalEmpWage = totalWage;
             Console.WriteLine("Wage for " + empwage.companyName + " employees for " + day + " working days per month : " +empwage.totalEmpWage);
             Console.WriteLine();
+        }
+        public int GetTotalWage(string companyName)
+        {
+            return companyEmpWage[companyName].totalEmpWage;
         }
     }
 }
