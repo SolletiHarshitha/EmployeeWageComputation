@@ -44,7 +44,7 @@ namespace EmployeeWageCompution
         {
             Random random = new Random();
             int empHrs = 0;
-            int empWage = 0;
+            int dailyWage = 0;
             int totalWage = 0;
             int day = 1;
             int empWorkingHrs = 0;
@@ -64,15 +64,22 @@ namespace EmployeeWageCompution
                         break;
 
                 }
-                empWage = empHrs * empwage.wagePerHr;
+
+                dailyWage = empHrs * empwage.wagePerHr;
                 empWorkingHrs += empHrs;
-                totalWage += empWage;
+                totalWage += dailyWage;
+
                 if (empInput != 0)
+                {
+                    Console.WriteLine("Employee wage for DAY - "+day+" is : "+dailyWage);
                     day++;
+                }
             }
             //Calculating the total employee wage
+            Console.WriteLine();
             empwage.totalEmpWage = totalWage;
             Console.WriteLine("Wage for " + empwage.companyName + " employees for " + day + " working days per month : " +empwage.totalEmpWage);
+            Console.WriteLine();
         }
     }
 }
