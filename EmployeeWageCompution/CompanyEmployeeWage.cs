@@ -83,6 +83,7 @@ namespace EmployeeWageCompution
             Console.WriteLine("Wage for " + empwage.companyName + " employees for " + day + " working days per month : " +empwage.totalEmpWage);
             Console.WriteLine();
         }
+        //Method to get total wage
         public int GetTotalWage(string companyName)
         {
             return companyEmpWage[companyName].totalEmpWage;
