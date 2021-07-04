@@ -4,8 +4,13 @@ using System.Text;
 
 namespace EmployeeWageCompution
 {
-   
-    class CompanyEmployeeWage
+    //Interface is implemented
+    public interface ICompanyEmpWage
+    {
+        public void addCompany(string companyName, int wagePerHr, int maxWorkingDays, int maxWorkingHrs);
+        public void Compute();
+    }
+    class CompanyEmployeeWage : ICompanyEmpWage
     {
         public const int FULL_TIME = 1;
         public const int PART_TIME = 2;
